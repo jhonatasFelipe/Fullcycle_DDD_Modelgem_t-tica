@@ -11,6 +11,7 @@ export default class Customer {
     this._id = id;
     this._name = name;
     this.validate();
+    
   }
 
   get id(): string {
