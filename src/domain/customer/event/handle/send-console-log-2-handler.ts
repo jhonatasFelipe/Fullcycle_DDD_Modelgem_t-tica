@@ -3,6 +3,6 @@ import { CustomerCreatedEvent } from "../customer-created";
 
 export class SendConsoleLog2Handler implements EventHandlerInterface<CustomerCreatedEvent>{
     handle(event: CustomerCreatedEvent): void {
-        console.log("Esse é o Segundo console.log")
+        console.log("Esse é o segundo console.log do evento: CustomerCreated")
     } 
 }
