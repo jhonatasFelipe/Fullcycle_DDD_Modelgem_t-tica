@@ -10,7 +10,7 @@ describe("Integration test to create product",()=>{
     beforeEach(async () => {
       sequelize = new Sequelize({
         dialect: "sqlite",
-        storage: ":memory",
+        storage: ":memory:",
         logging: false,
         sync: { force: true },
       });
@@ -22,7 +22,7 @@ describe("Integration test to create product",()=>{
     afterEach(async () => {
       await sequelize.close();
     });
-    
+
     it("Should create a product", async ()=>{
 
         const  repository =  new ProductRepository();
