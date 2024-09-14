@@ -1,5 +1,5 @@
 import ProductFactory from "../../../domain/product/factory/product.factory";
-import UpdateProductUseCase from "./find.product.usecase";
+import FindProductUseCase from "./find.product.usecase";
 
 const product =  ProductFactory.create("a", "Produto 1", 50.00);
 
@@ -22,7 +22,7 @@ describe("United find product use case",()=>{
     it("Should find a product ", async ()=>{
         const productRepository =  MockProductRepository();
 
-        const useCase  = new UpdateProductUseCase(productRepository);
+        const useCase  = new FindProductUseCase(productRepository);
 
         const output = await useCase.execute(input);
 
